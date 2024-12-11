@@ -34,10 +34,11 @@ public class LogoutServlet extends HttpServlet {
 		final String USER_ID = (String) SESSION.getAttribute("user_id");
 		final String PASSWORD = (String) SESSION.getAttribute("password");
 
-		if (USER_ID != null && PASSWORD != null) {
-			SESSION.invalidate();
+		if (USER_ID == null || PASSWORD == null) {
 			response.sendRedirect(request.getContextPath() + "/login");
 		} else {
+			SESSION.removeAttribute("user_id");
+			SESSION.removeAttribute("password");
 			response.sendRedirect(request.getContextPath() + "/login");
 		}
 	}

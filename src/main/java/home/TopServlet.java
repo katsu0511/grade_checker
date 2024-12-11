@@ -34,10 +34,10 @@ public class TopServlet extends HttpServlet {
 		final String USER_ID = (String) SESSION.getAttribute("user_id");
 		final String PASSWORD = (String) SESSION.getAttribute("password");
 
-		if (USER_ID != null && PASSWORD != null) {
-			request.getRequestDispatcher("/WEB-INF/app/home/top.jsp").forward(request, response);
-		} else {
+		if (USER_ID == null || PASSWORD == null) {
 			response.sendRedirect(request.getContextPath() + "/login");
+		} else {
+			request.getRequestDispatcher("/WEB-INF/app/home/top.jsp").forward(request, response);
 		}
 	}
 }
