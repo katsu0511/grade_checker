@@ -13,8 +13,8 @@
 	<header>
 		<div class="container">
 			<h1><a href="<%= request.getContextPath() %>/top">Grade Checker</a></h1>
-			<% if (session.getAttribute("email") != null && session.getAttribute("password") != null) { %>
-				<form class="header-btn" action="<%= request.getContextPath() %>/logout" method="POST">
+			<% if (session.getAttribute("user_id") != null && session.getAttribute("password") != null) { %>
+				<form class="header_btn" action="<%= request.getContextPath() %>/logout" method="POST">
 					<button type="submit" class="button logout">Logout</button>
 				</form>
 			<% } %>
