@@ -30,7 +30,7 @@
 
 				<div class="login_item">
 					<div class="login_submit">
-						<input type="submit" class="button" name="login_btn" value="Login">
+						<input type="submit" class="button login" name="login_btn" value="Login">
 					</div>
 				</div>
 
