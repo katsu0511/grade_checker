@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
 <jsp:include page="../common/header.jsp" flush="true"/>
 
 <main>
@@ -6,7 +7,7 @@
 		<div class="top">
 			<div class="menus">
 				<div class="menu">
-					<a href="<%= request.getContextPath() %>/profile">Profile</a>
+					<a href="${pageContext.request.contextPath}/profile">Profile</a>
 				</div>
 			</div>
 		</div>
