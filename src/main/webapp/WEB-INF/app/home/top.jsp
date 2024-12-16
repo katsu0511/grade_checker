@@ -7,7 +7,7 @@
 		<div class="top">
 			<div class="menus">
 				<div class="menu">
-					<a href="${pageContext.request.contextPath}/profile">Profile</a>
+					<a href="${pageContext.request.contextPath}/index/grade">Index Grade</a>
 				</div>
 			</div>
 		</div>
