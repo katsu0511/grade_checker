@@ -39,4 +39,14 @@
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>IndexGradeServlet</display-name>
+    <servlet-name>IndexGradeServlet</servlet-name>
+    <servlet-class>grade.IndexGradeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndexGradeServlet</servlet-name>
+    <url-pattern>/IndexGradeServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
