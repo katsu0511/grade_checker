@@ -1,7 +1,13 @@
 package grade;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
+import db.UserDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -39,6 +45,51 @@ public class AddGradeServlet extends HttpServlet {
 		} else {
 			request.setCharacterEncoding("UTF-8");
 			response.setContentType("text/html;charset=UTF-8");
+			
+			final UserDAO USER_DAO = new UserDAO();
+			Connection conn = null;
+			PreparedStatement pstmt1 = null;
+			PreparedStatement pstmt2 = null;
+			ResultSet rset1 = null;
+			ResultSet rset2 = null;
+			
+			try {
+				conn = USER_DAO.getConnection();
+				String sql1 = "SELECT     Term "
+							+ "FROM       Term "
+							+ "ORDER BY   Term ";
+				pstmt1 = conn.prepareStatement(sql1);
+				rset1 = pstmt1.executeQuery();
+				final ArrayList<String> TERMS = new ArrayList<String>();
+				
+				while (rset1.next()) {
+					TERMS.add(rset1.getString(1));
+				}
+				
+				String sql2 = "SELECT     Mark "
+							+ "FROM       Mark ";
+				pstmt2 = conn.prepareStatement(sql2);
+				rset2 = pstmt2.executeQuery();
+				final ArrayList<String> MARKS = new ArrayList<String>();
+				
+				while (rset2.next()) {
+					MARKS.add(rset2.getString(1));
+				}
+				
+				request.setAttribute("terms", TERMS);
+				request.setAttribute("marks", MARKS);
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					pstmt1.close();
+					pstmt2.close();
+					rset1.close();
+					rset2.close();
+					conn.close();
+				} catch (SQLException e) { }
+			}
 			
 			request.getRequestDispatcher("/WEB-INF/app/grade/add_grade.jsp").forward(request, response);
 		}
