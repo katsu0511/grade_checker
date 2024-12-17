@@ -16,7 +16,7 @@
 					<select id="term" name="term">
 						<option value="">-</option>
 						<c:forEach var="term" items="${terms}">
-							<option value="term">${term}</option>
+							<option value="${term}">${term}</option>
 						</c:forEach>
 					</select>
 					<p id="term_error" class="error">Choose term</p>
@@ -47,7 +47,7 @@
 					<select id="grade" name="grade">
 						<option value="">-</option>
 						<c:forEach var="mark" items="${marks}">
-							<option value="mark">${mark}</option>
+							<option value="${mark}">${mark}</option>
 						</c:forEach>
 					</select>
 					<p id="grade_error" class="error">Choose grade</p>
@@ -55,6 +55,7 @@
 			</div>
 			
 			<div class="add_buttons">
+				<input type="hidden" id="user_id" name="user_id" value="${userId}" required>
 				<input type="submit" class="submit_btn button" name="submit" value="Add" form="grade_form">
 			</div>
 			
