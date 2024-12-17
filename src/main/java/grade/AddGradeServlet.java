@@ -55,9 +55,9 @@ public class AddGradeServlet extends HttpServlet {
 			
 			try {
 				conn = USER_DAO.getConnection();
-				String sql1 = "SELECT     Term "
-							+ "FROM       Term "
-							+ "ORDER BY   Term ";
+				String sql1 = "SELECT     Term  "
+							+ "FROM       Term  "
+							+ "ORDER BY   TermID";
 				pstmt1 = conn.prepareStatement(sql1);
 				rset1 = pstmt1.executeQuery();
 				final ArrayList<String> TERMS = new ArrayList<String>();
@@ -66,8 +66,9 @@ public class AddGradeServlet extends HttpServlet {
 					TERMS.add(rset1.getString(1));
 				}
 				
-				String sql2 = "SELECT     Mark "
-							+ "FROM       Mark ";
+				String sql2 = "SELECT     Mark  "
+							+ "FROM       Mark  "
+							+ "ORDER BY   MarkID";
 				pstmt2 = conn.prepareStatement(sql2);
 				rset2 = pstmt2.executeQuery();
 				final ArrayList<String> MARKS = new ArrayList<String>();
