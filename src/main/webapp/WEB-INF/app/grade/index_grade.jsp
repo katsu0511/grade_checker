@@ -29,13 +29,13 @@
 				<div class="display">
 					<div class="display_thead">
 						<div class="display_th">Code</div>
-						<div class="display_th">Cource</div>
+						<div class="display_th">Course</div>
 						<div class="display_th">Grade</div>
 					</div>
 					<c:forEach var="grade" items="${grades}">
 						<div class="display_tbody">
 							<div class="display_td">${grade.code}</div>
-							<div class="display_td">${grade.cource}</div>
+							<div class="display_td">${grade.course}</div>
 							<div class="display_td">${grade.grade}</div>
 						</div>
 					</c:forEach>
