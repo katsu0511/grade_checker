@@ -12,14 +12,14 @@
 				<div class="login_item">
 					<label for="user_id" class="login_label">User ID :</label>
 					<div class="login_input">
-						<input type="text" id="user_id" class="login_info" name="user_id" value="${user_id}">
+						<input type="text" id="user_id" class="login_info" name="user_id" value="${user_id}" autocomplete="off">
 					</div>
 				</div>
 				
 				<div class="login_item">
 					<label for="password" class="login_label">Password :</label>
 					<div class="login_input">
-						<input type="password" id="password" class="login_info" name="password" value="${password}">
+						<input type="password" id="password" class="login_info" name="password" value="${password}" autocomplete="off">
 					</div>
 				</div>
 				

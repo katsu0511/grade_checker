@@ -26,7 +26,7 @@
 			<div class="tr">
 				<label for="code" class="th">Course Code:</label>
 				<div class="td">
-					<input type="text" id="code" name="code" required>
+					<input type="text" id="code" name="code" autocomplete="off" required>
 					<p id="code_error1" class="error">Input course code</p>
 					<p id="code_error2" class="error"></p>
 				</div>
@@ -35,7 +35,7 @@
 			<div class="tr">
 				<label for="name" class="th">Course Name:</label>
 				<div class="td">
-					<input type="text" id="name" name="name" required>
+					<input type="text" id="name" name="name" autocomplete="off" required>
 					<p id="name_error1" class="error">Input course name</p>
 					<p id="name_error2" class="error"></p>
 				</div>
