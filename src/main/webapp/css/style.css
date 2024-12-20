@@ -169,6 +169,7 @@ h2 {
 .link a {
 	color: green;
 	font-size: 22px;
+	text-decoration: none;
 	transition: all 0.3s;
 }
 
