@@ -59,6 +59,10 @@
 				<input type="submit" class="submit_btn button" name="submit" value="Add" form="grade_form">
 			</div>
 			
+			<div class="link">
+				<a href="${pageContext.request.contextPath}/index/grade">&lt;&lt; Grade Status</a>
+			</div>
+			
 		</form>
 	</div>
 </main>
