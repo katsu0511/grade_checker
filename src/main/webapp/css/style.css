@@ -151,13 +151,14 @@ h2 {
 
 .error {
 	display: none;
+	color: red;
 }
 
 .add_buttons {
 	padding-bottom: 30px;
 }
 
-.submit_btn {
+#submit_btn {
 	margin: 0 auto;
 }
 

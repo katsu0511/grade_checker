@@ -13,7 +13,7 @@
 			<div class="tr">
 				<label for="term" class="th">Term:</label>
 				<div class="td">
-					<select id="term" name="term">
+					<select id="term" name="term" required>
 						<option value="">-</option>
 						<c:forEach var="term" items="${terms}">
 							<option value="${term}">${term}</option>
@@ -28,7 +28,7 @@
 				<div class="td">
 					<input type="text" id="code" name="code" autocomplete="off" required>
 					<p id="code_error1" class="error">Input course code</p>
-					<p id="code_error2" class="error"></p>
+					<p id="code_error2" class="error">Course code is 9 letters</p>
 				</div>
 			</div>
 			
@@ -37,14 +37,14 @@
 				<div class="td">
 					<input type="text" id="name" name="name" autocomplete="off" required>
 					<p id="name_error1" class="error">Input course name</p>
-					<p id="name_error2" class="error"></p>
+					<p id="name_error2" class="error">Course name is up to 100 letters</p>
 				</div>
 			</div>
 			
 			<div class="tr">
 				<label for="grade" class="th">Grade:</label>
 				<div class="td">
-					<select id="grade" name="grade">
+					<select id="grade" name="grade" required>
 						<option value="">-</option>
 						<c:forEach var="mark" items="${marks}">
 							<option value="${mark}">${mark}</option>
@@ -56,7 +56,7 @@
 			
 			<div class="add_buttons">
 				<input type="hidden" id="user_id" name="user_id" value="${userId}" required>
-				<input type="submit" class="submit_btn button" name="submit" value="Add" form="grade_form">
+				<input type="submit" id="submit_btn" class="button" name="submit" value="Add" form="grade_form">
 			</div>
 			
 			<div class="link">
