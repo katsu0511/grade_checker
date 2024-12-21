@@ -49,4 +49,14 @@
     <servlet-name>IndexGradeServlet</servlet-name>
     <url-pattern>/IndexGradeServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddGradeServlet</display-name>
+    <servlet-name>AddGradeServlet</servlet-name>
+    <servlet-class>grade.AddGradeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddGradeServlet</servlet-name>
+    <url-pattern>/AddGradeServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
