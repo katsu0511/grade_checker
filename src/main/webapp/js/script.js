@@ -14,7 +14,7 @@ if (submitBtn !== null) {
 	code.addEventListener('blur', () => {
 		if (code.value === '') {
 			codeError2.style.display = 'none';
-		} else if (!code.value.match(/^[A-Z0-9\s]{9}$/)) {
+		} else if (!code.value.match(/^.{9}$/)) {
 			codeError2.style.display = 'block';
 		} else {
 			codeError2.style.display = 'none';
@@ -24,7 +24,7 @@ if (submitBtn !== null) {
 	courseName.addEventListener('blur', () => {
 		if (courseName.value === '') {
 			courseNameError2.style.display = 'none';
-		} else if (!courseName.value.match(/^[a-zA-Z0-9\s]{,100}$/)) {
+		} else if (!courseName.value.match(/^.{1,100}$/)) {
 			courseNameError2.style.display = 'block';
 		} else {
 			courseNameError2.style.display = 'none';
@@ -60,12 +60,14 @@ if (submitBtn !== null) {
 			term.focus();
 		} else if (code.value === '') {
 			code.focus();
-		} else if (!code.value.match(/^[A-Z0-9\s]{9}$/)) {
+		} else if (!code.value.match(/^.{9}$/)) {
 			code.focus();
+			event.preventDefault();
 		} else if (courseName.value === '') {
 			courseName.focus();
-		} else if (!courseName.value.match(/^[a-zA-Z0-9\s]{,100}$/)) {
+		} else if (!courseName.value.match(/^.{1,100}$/)) {
 			courseName.focus();
+			event.preventDefault();
 		} else if (grade.value === '') {
 			grade.focus();
 		} else {

@@ -118,7 +118,7 @@ h2 {
 .tr {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: baseline;
 	margin: 20px 0;
 }
 
