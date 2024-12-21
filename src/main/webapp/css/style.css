@@ -44,6 +44,7 @@ h1 a:hover, .button:hover {
 	display: block;
 	background-color: greenyellow;
 	color: green;
+	font-size: 13.5px;
 	width: 100px;
 	height: 30px;
 	border: none;
@@ -176,6 +177,54 @@ h2 {
 
 .link a:hover {
 	opacity: 0.6;
+}
+
+.empty_info {
+	text-align: center;
+	margin-top: 60px;
+}
+
+.searchs {
+	margin: 0 0 10px 100px;
+}
+
+.grade_search {
+	display: flex;
+}
+
+.display {
+	width: 1000px;
+	border: solid 2px black;
+	margin: 0 auto;
+}
+
+.display_thead, .display_tbody {
+	display: flex;
+}
+
+.display_thead {
+	border-bottom: solid 2px black;
+}
+
+.display_tbody {
+	border-bottom: solid 1px black;
+}
+
+.display_th, .display_td {
+	width: 250px;
+	height: 40px;
+	border-right: solid 2px black;
+}
+
+.display_tbody:last-child, .display_th:last-child, .display_td:last-child {
+	border: none;
+}
+
+.add_grade a {
+	text-align: center;
+	line-height: 30px;
+	text-decoration: none;
+	margin: 60px auto 0;
 }
 
 footer {

@@ -4,22 +4,16 @@
 
 <main>
 	<div class="container">
+		<div class="display_title">
+			<h2>Grade Status</h2>
+		</div>
 		<c:choose>
 			<c:when test="${empty grades}">
-				<p>No grade info</p>
-				<div class="add_grade">
-					<a href="${pageContext.request.contextPath}/add/grade" class="button">Add Grade</a>
-				</div>
+				<p class="empty_info">No grade info</p>
 			</c:when>
 			<c:otherwise>
-				<div class="display_title">
-					<h2>Grade Status</h2>
-				</div>
-				<div class="add_grade">
-					<a href="${pageContext.request.contextPath}/add/grade" class="button">Add Grade</a>
-				</div>
 				<div class="searchs">
-					<div class="search grade_search">
+					<div class="grade_search">
 						<h3>Search:</h3>
 						<select id="term">
 							<option value="">-</option>
@@ -42,11 +36,11 @@
 						</div>
 					</c:forEach>
 				</div>
-				<div class="add_grade">
-					<a href="${pageContext.request.contextPath}/add/grade" class="button">Add Grade</a>
-				</div>
 			</c:otherwise>
 		</c:choose>
+		<div class="add_grade">
+			<a href="${pageContext.request.contextPath}/add/grade" class="button">Add Grade</a>
+		</div>
 	</div>
 </main>
 
