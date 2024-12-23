@@ -111,6 +111,32 @@ h2 {
 	text-align: center;
 }
 
+.top {
+	padding-top: 100px;
+}
+
+.menu a {
+	display: block;
+	background-color: green;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	width: 600px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	text-decoration: none;
+	border: 5px solid green;
+	border-radius: 15px;
+	margin: 0 auto;
+	transition: all 0.3s;
+}
+
+.menu a:hover {
+	background-color: white;
+	color: green;
+}
+
 #grade_form {
 	width: 450px;
 	margin: 0 auto;
