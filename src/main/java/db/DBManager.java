@@ -11,10 +11,10 @@ public class DBManager extends UserDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		String sql = "SELECT  UserId, Password "
-				   + "FROM    User             "
-				   + "WHERE   UserId       = ? "
-				   + "AND     Password     = ? ";
+		String sql = "SELECT  UserId, Password            "
+				   + "FROM    User                        "
+				   + "WHERE   UserId           = BINARY ? "
+				   + "AND     Password         = BINARY ? ";
 		UserDTO user = null;
 
 		try {
