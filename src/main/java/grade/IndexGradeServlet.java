@@ -55,13 +55,15 @@ public class IndexGradeServlet extends HttpServlet {
 			
 			try {
 				conn = USER_DAO.getConnection();
-				String sql = "SELECT            Term.Term, Grade.Code, Grade.Course, Mark.Mark "
-						   + "FROM              Grade                                          "
-						   + "LEFT OUTER JOIN   Term                                           "
-						   + "ON                Grade.Term = Term.TermID                       "
-						   + "LEFT OUTER JOIN   Mark                                           "
-						   + "ON                Grade.Grade = Mark.MarkID                      "
-						   + "WHERE             UserID = ?                                     ";
+				String sql = "SELECT            Term.Term, Grade.Code, Grade.Course, Mark.Mark, Gpa.Gpa "
+						   + "FROM              Grade                                                   "
+						   + "LEFT OUTER JOIN   Term                                                    "
+						   + "ON                Grade.Term = Term.TermID                                "
+						   + "LEFT OUTER JOIN   Mark                                                    "
+						   + "ON                Grade.Grade = Mark.MarkID                               "
+						   + "LEFT OUTER JOIN   Gpa                                                     "
+						   + "ON                Grade.Grade = Gpa.GpaID                                 "
+						   + "WHERE             UserID = BINARY ?                                       ";
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, USER_ID);
 				rset = pstmt.executeQuery();
@@ -73,6 +75,7 @@ public class IndexGradeServlet extends HttpServlet {
 					GRADE.put("code", rset.getString(2));
 					GRADE.put("course", rset.getString(3));
 					GRADE.put("grade", rset.getString(4));
+					GRADE.put("gpa", rset.getString(5));
 					GRADES.add(GRADE);
 				}
 				

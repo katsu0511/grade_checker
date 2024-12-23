@@ -26,6 +26,7 @@
 						<div class="display_th code">Code</div>
 						<div class="display_th course">Course</div>
 						<div class="display_th grade">Grade</div>
+						<div class="display_th grade">GPA</div>
 					</div>
 					<c:forEach var="grade" items="${grades}">
 						<div class="display_tbody">
@@ -33,6 +34,7 @@
 							<div class="display_td code">${grade.code}</div>
 							<div class="display_td course">${grade.course}</div>
 							<div class="display_td grade">${grade.grade}</div>
+							<div class="display_td gpa">${grade.gpa}</div>
 						</div>
 					</c:forEach>
 				</div>
