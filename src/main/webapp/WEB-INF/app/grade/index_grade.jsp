@@ -4,22 +4,16 @@
 
 <main>
 	<div class="container">
+		<div class="display_title">
+			<h2>Grade Status</h2>
+		</div>
 		<c:choose>
 			<c:when test="${empty grades}">
-				<p>No grade info</p>
-				<div class="add_grade">
-					<a href="${pageContext.request.contextPath}/add/grade" class="button">Add Grade</a>
-				</div>
+				<p class="empty_info">No grade info</p>
 			</c:when>
 			<c:otherwise>
-				<div class="display_title">
-					<h2>Grade Status</h2>
-				</div>
-				<div class="add_grade">
-					<a href="${pageContext.request.contextPath}/add/grade" class="button">Add Grade</a>
-				</div>
 				<div class="searchs">
-					<div class="search grade_search">
+					<div class="grade_search">
 						<h3>Search:</h3>
 						<select id="term">
 							<option value="">-</option>
@@ -28,25 +22,29 @@
 				</div>
 				<div class="display">
 					<div class="display_thead">
-						<div class="display_th">Term</div>
-						<div class="display_th">Code</div>
-						<div class="display_th">Course</div>
-						<div class="display_th">Grade</div>
+						<div class="display_th term">Term</div>
+						<div class="display_th code">Code</div>
+						<div class="display_th course">Course</div>
+						<div class="display_th grade">Grade</div>
 					</div>
 					<c:forEach var="grade" items="${grades}">
 						<div class="display_tbody">
-							<div class="display_td">${grade.term}</div>
-							<div class="display_td">${grade.code}</div>
-							<div class="display_td">${grade.course}</div>
-							<div class="display_td">${grade.grade}</div>
+							<div class="display_td term">${grade.term}</div>
+							<div class="display_td code">${grade.code}</div>
+							<div class="display_td course">${grade.course}</div>
+							<div class="display_td grade">${grade.grade}</div>
 						</div>
 					</c:forEach>
 				</div>
-				<div class="add_grade">
-					<a href="${pageContext.request.contextPath}/add/grade" class="button">Add Grade</a>
-				</div>
 			</c:otherwise>
 		</c:choose>
+		<div class="add_grade">
+			<a href="${pageContext.request.contextPath}/add/grade" class="button">Add Grade</a>
+		</div>
+		
+		<div class="link">
+			<a href="${pageContext.request.contextPath}/top">&lt;&lt; Top</a>
+		</div>
 	</div>
 </main>
 

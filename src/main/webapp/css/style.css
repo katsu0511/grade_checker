@@ -3,6 +3,7 @@
 html, body {
 	padding: 0;
 	margin: 0;
+	user-select: none;
 }
 
 .container {
@@ -44,6 +45,7 @@ h1 a:hover, .button:hover {
 	display: block;
 	background-color: greenyellow;
 	color: green;
+	font-size: 13.5px;
 	width: 100px;
 	height: 30px;
 	border: none;
@@ -110,6 +112,32 @@ h2 {
 	text-align: center;
 }
 
+.top {
+	padding-top: 100px;
+}
+
+.menu a {
+	display: block;
+	background-color: green;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	width: 600px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	text-decoration: none;
+	border: 5px solid green;
+	border-radius: 15px;
+	margin: 0 auto;
+	transition: all 0.3s;
+}
+
+.menu a:hover {
+	background-color: white;
+	color: green;
+}
+
 #grade_form {
 	width: 450px;
 	margin: 0 auto;
@@ -132,7 +160,7 @@ h2 {
 	width: 300px;
 }
 
-.td select, .td input {
+.td select, .td input, #term {
 	border: solid 1px black;
 	border-radius: 5px;
 	padding: 2px 5px;
@@ -176,6 +204,89 @@ h2 {
 
 .link a:hover {
 	opacity: 0.6;
+}
+
+.empty_info {
+	text-align: center;
+	margin-top: 60px;
+}
+
+.searchs {
+	margin: 30px 0 10px 100px;
+}
+
+.grade_search {
+	display: flex;
+	align-items: center;
+}
+
+.grade_search h3 {
+	margin-right: 10px;
+}
+
+.grade_search #term {
+	width: 200px;
+	height: 30px;
+}
+
+.display {
+	width: 1000px;
+	border: solid 2px black;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+.display_thead, .display_tbody {
+	display: flex;
+}
+
+.display_thead {
+	border-bottom: solid 2px black;
+}
+
+.display_tbody {
+	border-bottom: solid 1px black;
+}
+
+.display_th, .display_td {
+	height: 40px;
+	border-right: solid 2px black;
+	line-height: 40px;
+	box-sizing: border-box;
+}
+
+.term, .code {
+	width: 250px;
+	text-align: center;
+}
+
+.course {
+	width: 400px;
+}
+
+.display_thead .course {
+	text-align: center;
+}
+
+.display_tbody .course {
+	text-align: left;
+	padding-left: 6px;
+}
+
+.grade {
+	width: 96px;
+	text-align: center;
+}
+
+.display_tbody:last-child, .display_th:last-child, .display_td:last-child {
+	border: none;
+}
+
+.add_grade a {
+	text-align: center;
+	line-height: 30px;
+	text-decoration: none;
+	margin: 60px auto 30px;
 }
 
 footer {
