@@ -41,6 +41,10 @@
 		<div class="add_grade">
 			<a href="${pageContext.request.contextPath}/add/grade" class="button">Add Grade</a>
 		</div>
+		
+		<div class="link">
+			<a href="${pageContext.request.contextPath}/top">&lt;&lt; Top</a>
+		</div>
 	</div>
 </main>
 
