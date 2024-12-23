@@ -22,17 +22,17 @@
 				</div>
 				<div class="display">
 					<div class="display_thead">
-						<div class="display_th">Term</div>
-						<div class="display_th">Code</div>
-						<div class="display_th">Course</div>
-						<div class="display_th">Grade</div>
+						<div class="display_th term">Term</div>
+						<div class="display_th code">Code</div>
+						<div class="display_th course">Course</div>
+						<div class="display_th grade">Grade</div>
 					</div>
 					<c:forEach var="grade" items="${grades}">
 						<div class="display_tbody">
-							<div class="display_td">${grade.term}</div>
-							<div class="display_td">${grade.code}</div>
-							<div class="display_td">${grade.course}</div>
-							<div class="display_td">${grade.grade}</div>
+							<div class="display_td term">${grade.term}</div>
+							<div class="display_td code">${grade.code}</div>
+							<div class="display_td course">${grade.course}</div>
+							<div class="display_td grade">${grade.grade}</div>
 						</div>
 					</c:forEach>
 				</div>
