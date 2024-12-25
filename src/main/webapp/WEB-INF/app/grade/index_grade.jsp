@@ -37,6 +37,10 @@
 							<div class="display_td gpa">${grade.gpa}</div>
 						</div>
 					</c:forEach>
+					<div class="display_bottom">
+						<div class="display_total">Total GPA</div>
+						<div class="display_gpa">${avgGpa}</div>
+					</div>
 				</div>
 			</c:otherwise>
 		</c:choose>
