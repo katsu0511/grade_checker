@@ -248,11 +248,15 @@ h2 {
 	border-bottom: solid 1px black;
 }
 
-.display_th, .display_td {
+.display_th, .display_td, .display_total {
 	height: 40px;
 	border-right: solid 2px black;
 	line-height: 40px;
 	box-sizing: border-box;
+}
+
+.display_th:last-child, .display_td:last-child {
+	border: none;
 }
 
 .term {
@@ -287,8 +291,12 @@ h2 {
 	text-align: center;
 }
 
-.display_tbody:last-child, .display_th:last-child, .display_td:last-child {
-	border: none;
+.display_bottom {
+	border-top: solid 1px black;
+}
+
+.display_total {
+	width: 897px;
 }
 
 .add_grade a {
