@@ -277,7 +277,7 @@ h2 {
 	width: 400px;
 }
 
-.display_thead .course, .display_thead .term {
+.display_thead .course, .display_thead .term, .display_gpa {
 	text-align: center;
 }
 
@@ -297,9 +297,11 @@ h2 {
 
 .display_total {
 	width: 897px;
+	text-align: center;
 }
 
 .display_gpa {
+	width: 97px;
 	height: 40px;
 	line-height: 40px;
 	box-sizing: border-box;
