@@ -255,8 +255,17 @@ h2 {
 	box-sizing: border-box;
 }
 
-.term, .code {
-	width: 250px;
+.term {
+	width: 200px;
+}
+
+.display_tbody .term {
+	text-align: left;
+	padding-left: 42px;
+}
+
+.code {
+	width: 200px;
 	text-align: center;
 }
 
@@ -264,7 +273,7 @@ h2 {
 	width: 400px;
 }
 
-.display_thead .course {
+.display_thead .course, .display_thead .term {
 	text-align: center;
 }
 
@@ -273,8 +282,8 @@ h2 {
 	padding-left: 6px;
 }
 
-.grade {
-	width: 96px;
+.grade, .gpa {
+	width: 97px;
 	text-align: center;
 }
 
