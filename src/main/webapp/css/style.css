@@ -236,7 +236,7 @@ h2 {
 	margin: 0 auto;
 }
 
-.display_thead, .display_tbody {
+.display_thead, .display_tbody, .display_bottom {
 	display: flex;
 }
 
@@ -297,6 +297,12 @@ h2 {
 
 .display_total {
 	width: 897px;
+}
+
+.display_gpa {
+	height: 40px;
+	line-height: 40px;
+	box-sizing: border-box;
 }
 
 .add_grade a {
