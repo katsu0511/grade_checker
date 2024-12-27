@@ -17,6 +17,9 @@
 						<h3>Search:</h3>
 						<select id="term">
 							<option value="">-</option>
+							<c:forEach var="term" items="${terms}">
+								<option value="${term}">${term}</option>
+							</c:forEach>
 						</select>
 					</div>
 				</div>

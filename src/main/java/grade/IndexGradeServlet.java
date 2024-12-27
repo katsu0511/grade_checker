@@ -52,8 +52,10 @@ public class IndexGradeServlet extends HttpServlet {
 			Connection conn = null;
 			PreparedStatement pstmt1 = null;
 			PreparedStatement pstmt2 = null;
+			PreparedStatement pstmt3 = null;
 			ResultSet rset1 = null;
 			ResultSet rset2 = null;
+			ResultSet rset3 = null;
 			
 			try {
 				conn = USER_DAO.getConnection();
@@ -96,8 +98,21 @@ public class IndexGradeServlet extends HttpServlet {
 					avgGpa = Math.floor(rset2.getDouble(1) * 100) / 100;
 				}
 				
+				
+				String sql3 = "SELECT      Term   "
+							+ "FROM        Term   "
+							+ "ORDER BY    TermID ";
+				pstmt3 = conn.prepareStatement(sql3);
+				rset3 = pstmt3.executeQuery();
+				final ArrayList<String> TERMS = new ArrayList<String>();
+				
+				while (rset3.next()) {
+					TERMS.add(rset3.getString(1));
+				}
+				
 				request.setAttribute("grades", GRADES);
 				request.setAttribute("avgGpa", avgGpa);
+				request.setAttribute("terms", TERMS);
 				
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -105,8 +120,10 @@ public class IndexGradeServlet extends HttpServlet {
 				try {
 					pstmt1.close();
 					pstmt2.close();
+					pstmt3.close();
 					rset1.close();
 					rset2.close();
+					rset3.close();
 					conn.close();
 				} catch (SQLException e) { }
 			}
