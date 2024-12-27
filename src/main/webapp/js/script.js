@@ -77,3 +77,28 @@ if (submitBtn !== null) {
 		}
 	});
 }
+
+const searchTerm = document.getElementById('search_term');
+const displayGpa = document.getElementById('display_gpa');
+const displayTbodys = document.getElementsByClassName('display_tbody');
+const displayTbodyArray = Array.from(displayTbodys);
+let gpa = 0;
+let numberOfGpa = 0;
+
+if (searchTerm !== null) {
+	searchTerm.addEventListener('change', () => {
+		gpa = 0;
+		numberOfGpa = 0;
+		displayTbodyArray.forEach(function(displayTbody) {
+			const term = displayTbody.firstElementChild;
+			displayTbody.style.display = 'flex';
+			if (searchTerm.value !== '' && searchTerm.value !== term.textContent) {
+				displayTbody.style.display = 'none';
+			} else {
+				gpa += +(displayTbody.lastElementChild.textContent);
+				numberOfGpa++;
+			}
+		});
+		displayGpa.textContent = Math.floor((gpa / numberOfGpa) * 100) / 100;
+	});
+}

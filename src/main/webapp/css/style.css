@@ -160,7 +160,7 @@ h2 {
 	width: 300px;
 }
 
-.td select, .td input, #term {
+.td select, .td input, #term, #search_term {
 	border: solid 1px black;
 	border-radius: 5px;
 	padding: 2px 5px;
