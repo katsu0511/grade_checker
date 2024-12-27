@@ -15,7 +15,7 @@
 				<div class="searchs">
 					<div class="grade_search">
 						<h3>Search:</h3>
-						<select id="term">
+						<select id="search_term">
 							<option value="">-</option>
 							<c:forEach var="term" items="${terms}">
 								<option value="${term}">${term}</option>

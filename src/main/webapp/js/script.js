@@ -77,3 +77,19 @@ if (submitBtn !== null) {
 		}
 	});
 }
+
+const searchTerm = document.getElementById('search_term');
+const displayTbodys = document.getElementsByClassName('display_tbody');
+const displayTbodyArray = Array.from(displayTbodys);
+
+if (searchTerm !== null) {
+	searchTerm.addEventListener('change', () => {
+		displayTbodyArray.forEach(function(displayTbody) {
+			const term = displayTbody.firstElementChild;
+			displayTbody.style.display = 'flex';
+			if (searchTerm.value !== '' && searchTerm.value !== term.textContent) {
+				displayTbody.style.display = 'none';
+			}
+		});
+	});
+}
