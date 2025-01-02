@@ -5,7 +5,7 @@
 <main>
 	<div class="container">
 		<div class="display_title">
-			<h2>Grade Status</h2>
+			<h2>Grade Graph</h2>
 		</div>
 		<c:choose>
 			<c:when test="${empty grades}">
