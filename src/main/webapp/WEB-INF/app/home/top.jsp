@@ -9,6 +9,9 @@
 				<div class="menu">
 					<a href="${pageContext.request.contextPath}/index/grade">Index Grade</a>
 				</div>
+				<div class="menu">
+					<a href="${pageContext.request.contextPath}/graph/grade">Graph Grade</a>
+				</div>
 			</div>
 		</div>
 	</div>
