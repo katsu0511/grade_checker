@@ -23,33 +23,14 @@
 						</select>
 					</div>
 				</div>
-				<div class="display">
-					<div class="display_thead">
-						<div class="display_th term">Term</div>
-						<div class="display_th code">Code</div>
-						<div class="display_th course">Course</div>
-						<div class="display_th grade">Grade</div>
-						<div class="display_th grade">GPA</div>
-					</div>
+				<div id="canvas">
 					<c:forEach var="grade" items="${grades}">
-						<div class="display_tbody">
-							<div class="display_td term">${grade.term}</div>
-							<div class="display_td code">${grade.code}</div>
-							<div class="display_td course">${grade.course}</div>
-							<div class="display_td grade">${grade.grade}</div>
-							<div class="display_td gpa">${grade.gpa}</div>
-						</div>
+						<input type="text" value="${grade.term}">
+						<input type="text" value="${grade.avgGpa}">
 					</c:forEach>
-					<div class="display_bottom">
-						<div class="display_total">Total GPA</div>
-						<div id="display_gpa" class="display_gpa">${avgGpa}</div>
-					</div>
 				</div>
 			</c:otherwise>
 		</c:choose>
-		<div class="add_grade">
-			<a href="${pageContext.request.contextPath}/add/grade" class="button">Add Grade</a>
-		</div>
 		
 		<div class="link">
 			<a href="${pageContext.request.contextPath}/top">&lt;&lt; Top</a>
