@@ -5,7 +5,7 @@
 <main>
 	<div class="container">
 		<div class="display_title">
-			<h2>Grade Index</h2>
+			<h2>Grade Graph</h2>
 		</div>
 		<c:choose>
 			<c:when test="${empty grades}">
@@ -23,33 +23,19 @@
 						</select>
 					</div>
 				</div>
-				<div class="display">
-					<div class="display_thead">
-						<div class="display_th term">Term</div>
-						<div class="display_th code">Code</div>
-						<div class="display_th course">Course</div>
-						<div class="display_th grade">Grade</div>
-						<div class="display_th grade">GPA</div>
-					</div>
+				<canvas id="canvas">
 					<c:forEach var="grade" items="${grades}">
-						<div class="display_tbody">
-							<div class="display_td term">${grade.term}</div>
-							<div class="display_td code">${grade.code}</div>
-							<div class="display_td course">${grade.course}</div>
-							<div class="display_td grade">${grade.grade}</div>
-							<div class="display_td gpa">${grade.gpa}</div>
-						</div>
+						<input type="hidden" value="${grade.term}">
+						<input type="hidden" value="${grade.avgGpa}">
 					</c:forEach>
-					<div class="display_bottom">
-						<div class="display_total">Total GPA</div>
-						<div id="display_gpa" class="display_gpa">${avgGpa}</div>
-					</div>
+				</canvas>
+				<div id="term_scale">
+					<c:forEach var="term" items="${terms}">
+						<span>${term}</span>
+					</c:forEach>
 				</div>
 			</c:otherwise>
 		</c:choose>
-		<div class="add_grade">
-			<a href="${pageContext.request.contextPath}/add/grade" class="button">Add Grade</a>
-		</div>
 		
 		<div class="link">
 			<a href="${pageContext.request.contextPath}/top">&lt;&lt; Top</a>

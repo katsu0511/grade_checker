@@ -7,7 +7,10 @@
 		<div class="top">
 			<div class="menus">
 				<div class="menu">
-					<a href="${pageContext.request.contextPath}/index/grade">Index Grade</a>
+					<a href="${pageContext.request.contextPath}/index/grade">Grade Index</a>
+				</div>
+				<div class="menu">
+					<a href="${pageContext.request.contextPath}/graph/grade">Grade Graph</a>
 				</div>
 			</div>
 		</div>
