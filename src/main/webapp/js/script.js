@@ -102,3 +102,10 @@ if (searchTerm !== null) {
 		displayGpa.textContent = Math.floor((gpa / numberOfGpa) * 100) / 100;
 	});
 }
+
+const canvas = document.getElementById('canvas');
+if (canvas !== null) {
+	const ctx = canvas.getContext('2d');
+	ctx.strokeStyle = 'black';
+	ctx.lineWidth = 0;
+}

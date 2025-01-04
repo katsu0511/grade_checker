@@ -23,10 +23,15 @@
 						</select>
 					</div>
 				</div>
-				<div id="canvas">
+				<canvas id="canvas">
 					<c:forEach var="grade" items="${grades}">
-						<input type="text" value="${grade.term}">
-						<input type="text" value="${grade.avgGpa}">
+						<input type="hidden" value="${grade.term}">
+						<input type="hidden" value="${grade.avgGpa}">
+					</c:forEach>
+				</canvas>
+				<div id="term_scale">
+					<c:forEach var="term" items="${terms}">
+						<span>${term}</span>
 					</c:forEach>
 				</div>
 			</c:otherwise>
