@@ -1,4 +1,4 @@
-package graph;
+package grade;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -51,8 +51,10 @@ public class ShowGradeGraphServlet extends HttpServlet {
 			Connection conn = null;
 			PreparedStatement pstmt1 = null;
 			PreparedStatement pstmt2 = null;
+			PreparedStatement pstmt3 = null;
 			ResultSet rset1 = null;
 			ResultSet rset2 = null;
+			ResultSet rset3 = null;
 			
 			try {
 				conn = USER_DAO.getConnection();
@@ -88,8 +90,21 @@ public class ShowGradeGraphServlet extends HttpServlet {
 					TERMS.add(rset2.getString(1));
 				}
 				
+				
+				String sql3 = "SELECT     Mark  "
+							+ "FROM       Mark  "
+							+ "ORDER BY   MarkID";
+				pstmt3 = conn.prepareStatement(sql3);
+				rset3 = pstmt3.executeQuery();
+				final ArrayList<String> MARKS = new ArrayList<String>();
+				
+				while (rset3.next()) {
+					MARKS.add(rset3.getString(1));
+				}
+				
 				request.setAttribute("grades", GRADES);
 				request.setAttribute("terms", TERMS);
+				request.setAttribute("marks", MARKS);
 				
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -97,8 +112,10 @@ public class ShowGradeGraphServlet extends HttpServlet {
 				try {
 					pstmt1.close();
 					pstmt2.close();
+					pstmt3.close();
 					rset1.close();
 					rset2.close();
+					rset3.close();
 					conn.close();
 				} catch (SQLException e) { }
 			}

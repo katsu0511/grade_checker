@@ -320,14 +320,27 @@ h2 {
 }
 
 #canvas {
-	width: 100%;
+	display: block;
+	width: 1000px;
 	height: 520px;
 	border: solid 2px black;
+	margin: 0 auto;
+}
+
+#mark_scale {
+	position: absolute;
+	top: 204px;
+	margin-left: 70px;
+}
+
+#mark_scale span {
+	display: block;
+	margin-bottom: 26px;
 }
 
 #term_scale {
 	display: flex;
-	padding-left: 50px;
+	padding-left: 150px;
 	margin-bottom: 100px;
 }
 
@@ -335,20 +348,16 @@ h2 {
 	display: block;
 }
 
-#term_scale span:first-child {
-	margin-right: 100px;
+#term_scale span:first-child, #term_scale span:nth-child(3) {
+	margin-right: 60px;
 }
 
-#term_scale span:nth-child(2) {
-	margin-right: 120px;
+#term_scale span:nth-child(2), #term_scale span:nth-child(5) {
+	margin-right: 70px;
 }
 
-#term_scale span:nth-child(3) {
-	margin-right: 90px;
-}
-
-#term_scale span:nth-child(4), #term_scale span:nth-child(5) {
-	margin-right: 110px;
+#term_scale span:nth-child(4) {
+	margin-right: 65px;
 }
 
 footer {

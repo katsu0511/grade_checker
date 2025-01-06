@@ -29,6 +29,11 @@
 						<input type="hidden" value="${grade.avgGpa}">
 					</c:forEach>
 				</canvas>
+				<div id="mark_scale">
+					<c:forEach var="mark" items="${marks}">
+						<span>${mark}</span>
+					</c:forEach>
+				</div>
 				<div id="term_scale">
 					<c:forEach var="term" items="${terms}">
 						<span>${term}</span>
