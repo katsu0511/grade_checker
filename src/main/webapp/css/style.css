@@ -327,15 +327,15 @@ h2 {
 	margin: 0 auto;
 }
 
-#mark_scale {
+#gpa_scale {
 	position: absolute;
-	top: 204px;
-	margin-left: 70px;
+	top: 254px;
+	margin-left: 80px;
 }
 
-#mark_scale span {
+#gpa_scale span {
 	display: block;
-	margin-bottom: 26px;
+	margin-bottom: 90px;
 }
 
 #term_scale {
