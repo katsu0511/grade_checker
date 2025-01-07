@@ -25,14 +25,15 @@
 				</div>
 				<canvas id="canvas">
 					<c:forEach var="grade" items="${grades}">
-						<input type="hidden" value="${grade.term}">
-						<input type="hidden" value="${grade.avgGpa}">
+						<input type="hidden" id="${grade.term}" value="${grade.avgGpa}">
 					</c:forEach>
 				</canvas>
-				<div id="mark_scale">
-					<c:forEach var="mark" items="${marks}">
-						<span>${mark}</span>
-					</c:forEach>
+				<div id="gpa_scale">
+					<span>4</span>
+					<span>3</span>
+					<span>2</span>
+					<span>1</span>
+					<span>0</span>
 				</div>
 				<div id="term_scale">
 					<c:forEach var="term" items="${terms}">

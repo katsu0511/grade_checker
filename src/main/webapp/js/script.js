@@ -104,8 +104,14 @@ if (searchTerm !== null) {
 }
 
 const canvas = document.getElementById('canvas');
+const terms = [document.getElementById('Summer2024'), document.getElementById('Fall2024')];
+const radius = 2;
 if (canvas !== null) {
 	const ctx = canvas.getContext('2d');
-	ctx.strokeStyle = 'black';
-	ctx.lineWidth = 0;
+	ctx.fillStyle = "black";
+	terms.forEach((term, index) => {
+		ctx.beginPath();
+		ctx.arc(30 + index * 50, 33 * (4 - term.value) + 19, radius, 0, Math.PI * 2);
+		ctx.fill();
+	});
 }
