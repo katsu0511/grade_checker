@@ -71,7 +71,8 @@ public class ShowGradeGraphServlet extends HttpServlet {
 				
 				while (rset1.next()) {
 					final Map<String, String> GRADE = new HashMap<>();
-					GRADE.put("term", rset1.getString(1));
+					String[] term = rset1.getString(1).split(" ");
+					GRADE.put("term", term[1] + term[0]);
 					GRADE.put("avgGpa", String.valueOf(Math.floor(rset1.getDouble(2) * 100) / 100));
 					GRADES.add(GRADE);
 				}
