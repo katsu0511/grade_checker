@@ -104,14 +104,34 @@ if (searchTerm !== null) {
 }
 
 const canvas = document.getElementById('canvas');
-const terms = [document.getElementById('Summer2024'), document.getElementById('Fall2024')];
+const terms = [
+	document.getElementById('Summer2024'),
+	document.getElementById('Fall2024')
+];
 const radius = 2;
 if (canvas !== null) {
 	const ctx = canvas.getContext('2d');
+	let formerX = 0;
+	let formerY = 0;
+	let currentX = 0;
+	let currentY = 0;
 	ctx.fillStyle = "black";
 	terms.forEach((term, index) => {
+		formerX = currentX;
+		formerY = currentY;
+		currentX = 30 + index * 50;
+		currentY = 33 * (4 - term.value) + 19;
 		ctx.beginPath();
-		ctx.arc(30 + index * 50, 33 * (4 - term.value) + 19, radius, 0, Math.PI * 2);
+		ctx.arc(currentX, currentY, radius, 0, Math.PI * 2);
 		ctx.fill();
+		if (index > 0) {
+			ctx.beginPath();
+			ctx.lineTo(formerX, formerY);
+			ctx.lineTo(currentX, currentY);
+			ctx.lineTo(currentX - 1, currentY + 1);
+			ctx.lineTo(formerX - 1, formerY + 1);
+			ctx.lineTo(formerX, formerY);
+			ctx.fill();
+		}
 	});
 }
