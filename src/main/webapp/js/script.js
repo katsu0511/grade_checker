@@ -106,7 +106,11 @@ if (searchTerm !== null) {
 const canvas = document.getElementById('canvas');
 const terms = [
 	document.getElementById('Summer2024'),
-	document.getElementById('Fall2024')
+	document.getElementById('Fall2024'),
+	document.getElementById('Spring2025'),
+	document.getElementById('Summer2025'),
+	document.getElementById('Fall2025'),
+	document.getElementById('Spring2026')
 ];
 const radius = 2;
 if (canvas !== null) {
@@ -115,7 +119,21 @@ if (canvas !== null) {
 	let formerY = 0;
 	let currentX = 0;
 	let currentY = 0;
-	ctx.fillStyle = "black";
+	ctx.fillStyle = 'black';
+	ctx.strokeStyle = '#E6E6E6';
+	for (let i = 0; i < 6; i++) {
+		if (i < 4) {
+			ctx.beginPath();
+			ctx.moveTo(0, 19 + 33 * i);
+			ctx.lineTo(1000, 19 + 33 * i);
+			ctx.stroke();
+		}
+		ctx.beginPath();
+		ctx.moveTo(30 + i * 50, 0);
+		ctx.lineTo(30 + i * 50, 520);
+		ctx.stroke();
+	}
+	ctx.strokeStyle = 'black';
 	terms.forEach((term, index) => {
 		formerX = currentX;
 		formerY = currentY;
@@ -126,12 +144,9 @@ if (canvas !== null) {
 		ctx.fill();
 		if (index > 0) {
 			ctx.beginPath();
-			ctx.lineTo(formerX, formerY);
+			ctx.moveTo(formerX, formerY);
 			ctx.lineTo(currentX, currentY);
-			ctx.lineTo(currentX - 1, currentY + 1);
-			ctx.lineTo(formerX - 1, formerY + 1);
-			ctx.lineTo(formerX, formerY);
-			ctx.fill();
+			ctx.stroke();
 		}
 	});
 }
