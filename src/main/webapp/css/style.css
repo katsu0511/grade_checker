@@ -338,10 +338,17 @@ h2 {
 	margin-bottom: 90px;
 }
 
+#gpa_display {
+	position: absolute;
+	top: 446px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
 #term_scale {
 	display: flex;
 	padding-left: 150px;
-	margin-bottom: 100px;
+	margin-bottom: 30px;
 }
 
 #term_scale span {
@@ -358,6 +365,13 @@ h2 {
 
 #term_scale span:nth-child(4) {
 	margin-right: 65px;
+}
+
+#term_display {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 100px;
 }
 
 footer {
