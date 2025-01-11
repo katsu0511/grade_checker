@@ -35,11 +35,13 @@
 					<span>1</span>
 					<span>0</span>
 				</div>
+				<div id="gpa_display">GPA</div>
 				<div id="term_scale">
 					<c:forEach var="term" items="${terms}">
 						<span>${term}</span>
 					</c:forEach>
 				</div>
+				<div id="term_display">Term</div>
 			</c:otherwise>
 		</c:choose>
 		
