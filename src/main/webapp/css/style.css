@@ -355,16 +355,16 @@ h2 {
 	display: block;
 }
 
-#term_scale span:first-child, #term_scale span:nth-child(3) {
-	margin-right: 60px;
+#term_scale span:first-child, #term_scale span:nth-child(4) {
+	margin-right: 65px;
 }
 
 #term_scale span:nth-child(2), #term_scale span:nth-child(5) {
-	margin-right: 70px;
+	margin-right: 80px;
 }
 
-#term_scale span:nth-child(4) {
-	margin-right: 65px;
+#term_scale span:nth-child(3) {
+	margin-right: 70px;
 }
 
 #term_display {
