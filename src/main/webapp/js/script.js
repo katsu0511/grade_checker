@@ -99,7 +99,8 @@ if (searchTerm !== null) {
 				numberOfGpa++;
 			}
 		});
-		displayGpa.textContent = Math.floor((gpa / numberOfGpa) * 100) / 100;
+		const ave = Math.floor((gpa / numberOfGpa) * 100) / 100;
+		displayGpa.textContent = isNaN(ave) ? '-' : ave;
 	});
 }
 
